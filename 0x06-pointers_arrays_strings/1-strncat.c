@@ -1,25 +1,24 @@
 #include "kasiye.h"
 /**
- * *_strncat - concatenates n byte of two string
- * @dest: pointer destination
- * @src: pointer of bytes
- * @n: number of bytes to recieve
- * Return: void
+ * *_strncat - concatenate two string
+ * @src: The source of strings
+ * @dest: The destination of the string
+ * @n: The length of int
+ * Return: pointer to the resulting string dest
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int dest_len, i;
+	int i, j;
 
-	for (dest_len = 0; dest[dest_len] != '\n';)
-		dest_len++;
-
-	for (i = 0; i < n && src[i] != '\0';)
-		i++;
-	dest[dest_len + i] = src[i];
-
-	/*should end with a end of string char*/
-	dest[dest_len + i] = '\0';
-
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+		continue;
+	}
+	for (j = 0; src[j] != '\0' && j < n; j++)
+	{
+		dest[i + j] = src[j];
+	}
+	dest[i + j] = '\0';
 	return (dest);
 }
